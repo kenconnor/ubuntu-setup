@@ -15,6 +15,7 @@ sudo systemctl start ssh
 # ターミナルのプロンプトを短くする
 
 sed -e 's/XKBOPTIONS=\"\"/XKBOPTIONS=\"ctrl:nocaps\"/g' /etc/default/keyboard | sudo tee /etc/default/keyboard
+sudo systemctl restart console-setup
 
 # 日本語フォルダ名を英語表記に変更
 env LANGUAGE=C LC_MESSAGES=C xdg-user-dirs-gtk-update
