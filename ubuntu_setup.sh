@@ -4,6 +4,7 @@ yes | sudo apt-get update
 yes | sudo apt-get install vim-gtk3
 yes | sudo apt-get install tmux
 yes | sudo apt-get install git
+yes | sudo apt-get install xclip
 yes | sudo apt-get install openssh-server
 
 # enable ssh
