@@ -6,6 +6,7 @@ yes | sudo apt-get install tmux
 yes | sudo apt-get install git
 yes | sudo apt-get install xclip
 yes | sudo apt-get install openssh-server
+sudo adduser $USER dialout
 
 # enable ssh
 sudo systemctl enable ssh
