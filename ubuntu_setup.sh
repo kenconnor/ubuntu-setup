@@ -46,7 +46,7 @@ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 # 時間計算
-finish=$(( `date +%s` + 91 ))
+finish=$(( `date +%s` ))
 hours=$(( (finish-start)/(60*60) ))
 minutes=$(( (finish-start-hours*60*60)/60 ))
 seconds=$(( (finish-start)%60 ))
