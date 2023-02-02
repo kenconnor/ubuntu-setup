@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 時間計算
+start=`date +%s`
+
 yes | sudo apt-get update
 yes | sudo apt-get install vim-gtk3
 yes | sudo apt-get install tmux
@@ -41,3 +44,16 @@ yes | sudo apt update
 yes | sudo apt install ros-noetic-desktop-full
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
+
+# 時間計算
+finish=$(( `date +%s` + 91 ))
+hours=$(( (finish-start)/(60*60) ))
+minutes=$(( (finish-start-hours*60*60)/60 ))
+seconds=$(( (finish-start)%60 ))
+if [ $hours -gt 0 ]; then
+	echo -n "${hours}h"
+fi
+if [ $hours -gt 0 ] || [ $minutes -gt 0 ]; then
+	echo -n "${minutes}m"
+fi
+echo "${seconds}s"
